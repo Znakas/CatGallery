@@ -1,31 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
-    <data>
-        <variable name="user" type="com.znakas.catgallery.Grid"/>
-    </data>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.znakas.catgallery.MainActivity">
 
+
     <TextView
-        android:id="@+id/mSelectedText"
-        android:layout_width="match_parent"
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
+        android:background="@color/colorAccent"
+        android:text="network status!"
         android:textSize="24sp"
-        android:text="Hello World!"/>
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_status"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="15dp"-->
+    <!--android:text="Hello World!"-->
+    <!--app:layout_constraintEnd_toStartOf="parent"-->
+    <!--app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--app:layout_constraintRight_toRightOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+
+    <!--<ImageView-->
+        <!--android:id="@+id/im_image"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--tools:layout_editor_absoluteY="8dp"-->
+        <!--tools:layout_editor_absoluteX="8dp"-->
+        <!--android:src="@android:drawable/radiobutton_off_background"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/tv_status"/>-->
+
     <GridView
-        android:id="@+id/my_grid_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp"
-        android:numColumns="3"
-        android:gravity="center"
-        android:columnWidth="40dp"/>
+        android:id="@+id/gv_Cats"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:columnWidth="100dp"
+        android:maxHeight="10dp"
+        android:numColumns="auto_fit"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_status" />
 
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="load_cat"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gv_Cats" />
 
+    <!--<GridView-->
+    <!--android:id="@+id/gvCats"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:columnWidth="100dp"-->
+    <!--android:maxHeight="10dp"-->
+    <!--android:numColumns="auto_fit"-->
+    <!--tools:layout_editor_absoluteY="0dp"-->
+    <!--tools:layout_editor_absoluteX="8dp" />-->
+
+    <!--<Button-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="48dp"-->
+    <!--android:text="ADD"-->
+    <!--tools:layout_editor_absoluteY="8dp"-->
+    <!--tools:layout_editor_absoluteX="0dp" />-->
 </android.support.constraint.ConstraintLayout>
-</layout>
