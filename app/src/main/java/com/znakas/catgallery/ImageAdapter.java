@@ -68,17 +68,9 @@ public class ImageAdapter extends BaseAdapter {
 //        imageView = imgRes.getSmallImage();
         imageView = arrImages.get(position);
         imageView.setPadding(1, 1, 1, 1);
-        imageView.setScaleType(ImageView.ScaleType.FIT_START);
+        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         imageView.setLayoutParams(new GridView.LayoutParams(imgRes.getScreenSize(), imgRes.getScreenSize() / 2));
 
         return imageView;
     }
 }
-
-//    private int getWidth(){
-//        WindowManager wm = (WindowManager) mContext.getSystemService(Context.WINDOW_SERVICE);
-//        Display display = wm.getDefaultDisplay();
-//        Point size = new Point();
-//        display.getSize(size);
-//        return size.x/2;
-//    }
